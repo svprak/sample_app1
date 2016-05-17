@@ -27,4 +27,4 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'win32console' 
+gem 'win32console', '1.3.2'
