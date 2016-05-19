@@ -12,5 +12,5 @@ class User < ActiveRecord::Base
     # The ability to save a securely hashed password_digest attribute to the database
     # A pair of virtual attributes18 (password and password_confirmation), including presence validations upon object creation and a validation requiring that they match
     # An authenticate method that returns the user when the password is correct (and false otherwise)
-    validates :password, presence: true, length:{minimum: 6}
+    validates :password, presence: true, length:{minimum:2}
 end
