@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
     user  = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
+      # the method remmber is defined in User Controller
+      remember user
       redirect_to user
     else
       flash.now[:danger] = "Incorrect user or password"
