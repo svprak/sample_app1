@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
 
-  # add a secure password
+  # add this for functionality of a secure password
   has_secure_password
     # The ability to save a securely hashed password_digest attribute to the database
     # A pair of virtual attributes18 (password and password_confirmation), including presence validations upon object creation and a validation requiring that they match
