@@ -28,8 +28,8 @@ group :production do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'win32console', '1.3.2'
+#gem 'win32console', '1.3.2'
 
 gem 'bootstrap-sass'
 gem 'bcrypt'
-gem 'wdm'
+#gem 'wdm'
