@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
     # A pair of virtual attributes18 (password and password_confirmation), including presence validations upon object creation and a validation requiring that they match
     # An authenticate method that returns the user when the password is correct (and false otherwise)
     validates :password, presence: true, length:{minimum:2}
+
+    # Returns the hash digest of the given string.
+ def User.digest(string)
+   cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                 BCrypt::Engine.cost
+   BCrypt::Password.create(string, cost: cost)
+ end
 end
